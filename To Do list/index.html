@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <style>
+        body {
+            background-image: url(background.jpg);
+        }
+
+        img {
+            height: 30px;
+            width: 30px;
+        }
+
+        #todo_list {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            margin: 100px auto 20px;
+            padding: 40px 30px 70px;
+            border-radius: 10px;
+
+
+        }
+        .heading{
+            position: relative;
+            left: 160px;
+            bottom: 20px;
+        }
+        img{
+            position: relative;
+            left: 310px;
+            bottom: 80px;
+        }
+        .input_box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgb(204, 201, 201);
+            border-radius: 30px;
+             padding-left: 20px;
+             margin-bottom: 25px; 
+        }
+        input{
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 10px;
+            font-weight: 14px;
+        }
+        button{
+            border: none;
+            outline: none;
+            padding: 16px 50px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+        ul li{
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+        }
+        ul li::before{
+            content: '';
+            position: absolute;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            background-image: url(uncheck-16.png);
+            background-size: cover;
+            background-position: center;
+            bottom: 5px;
+            left: 8px;
+
+
+        }
+        ul li.checked{
+            color: rgba(49, 51, 51, 0.692);
+            text-decoration: line-through;
+        }
+        ul li.checked::before{
+            background-image: url(check-check-16.png);
+        }
+        ul li span{
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+            color:black;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            
+        }
+        ul li span:hover{
+            background-color: rgb(204, 200, 200);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="todo_list">
+            <h1 class="heading">To Do List</h1>
+            <img src="icon.png" alt="" srcset="">
+            <div class="input_box">
+                <input type="text" id="box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="listcontainer">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+                <li>Task 4</li> -->
+            </ul>
+        </div>
+    </div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
