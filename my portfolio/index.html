@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+    <style>
+        * {
+            background-color: rgb(10, 10, 49);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            font-size: 24px;
+            color: white;
+            text-decoration-color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        nav {
+            height: 7rem;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            /* background: black; */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #F96167;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: white;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 140%;
+            color: #F96167;
+        }
+
+        img {
+            height: 500px;
+            width: 300px;
+            display: block;
+            position: relative;
+            left: 200px;
+            bottom: 100px;
+
+        }
+
+        .icon1 {
+            width: 32px;
+            height: max-content;
+        }
+
+        .icon2 {
+            width: 32px;
+            height: max-content;
+        }
+
+        .btn {
+            display: inline-block;
+            width: fit-content;
+            padding: 1rem;
+            width: 8rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            color: #F96167;
+            border: 1px solid #F96167;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none !important;
+        }
+
+        .btn:hover {
+            background-color: #F96167;
+            color: rgb(10, 10, 49);
+        }
+
+        .btn_contact {
+            display: inline-block;
+            width: fit-content;
+            padding: 1rem;
+            width: 8rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            color: rgb(10, 10, 49);
+            border: 1px solid rgb(10, 10, 49);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 15px;
+            background-color: #F96167;
+            text-decoration: none !important;
+        }
+
+        .btn_contact:hover {
+            background-color: rgb(10, 10, 49);
+            color: #F96167;
+
+            border: 1px solid #F96167;
+        }
+
+        header {
+            padding-top: 14rem;
+        }
+
+        .header-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 800px;
+            justify-content: space-between;
+        }
+
+        .header_right {
+            text-align: center;
+            margin: auto;
+            position: relative;
+            left: 300px;
+            bottom: 100px;
+        }
+
+        .header_link {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            left: 50px;
+        }
+
+        .header_social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem;
+            position: relative;
+            right: 210px;
+            top: 100px;
+        }
+
+        .icon3 {
+            width: 32px;
+            height: max-content;
+            position: relative;
+            top: 3px;
+            left: 10px;
+
+        }
+
+        .class {
+            color: white;
+        }
+
+        .about1 {
+            border: 2px solid #F96167;
+            margin: 30px 30px;
+            padding: 30px;
+            box-sizing: border-box;
+
+        }
+
+        .heading {
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .heading_p {
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .icon4 {
+            width: 150px;
+            height: max-content;
+            position: relative;
+            top: 50px;
+            left: 80px;
+
+
+        }
+
+        .box {
+            /* border: 2px solid #F96167; */
+
+            height: 300px;
+            width: 300px;
+            display: inline-block;
+            margin-left: 100px;
+            margin-right: 1vw;
+
+
+
+        }
+        .sub_head{
+            position: relative;
+            left: 110px;
+            top: 50px;
+        }
+        h3{
+            color: white;
+        }
+        h4{
+            color: #F96167;
+        }
+        .project{
+            display: inline-block;
+        }
+        .img1{
+            height: 250px;
+            width: 250px;
+            margin:30px 30px;
+            position: relative;
+            top: 20px;
+            left: 40px;
+        }
+        .btn2{
+            display: inline-block;
+            width: fit-content;
+            padding: 1rem;
+            width: 8rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            color: rgb(10, 10, 49);
+            border: 1px solid rgb(10, 10, 49);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 15px;
+            background-color: #F96167;
+            text-decoration: none !important;
+            position: relative;
+            left:130px;
+        }
+        
+        .icon5 {
+            width: 32px;
+            height: max-content;
+            position: relative;
+            top: 3px;
+            left: 120px;
+        }
+        .icon6 {
+            width: 32px;
+            height: max-content;
+            position: relative;
+            top: 2px;
+            left: 40px;
+        }
+        .contact_container{
+            max-width: 30rem;
+            border: 1px solid #F96167;
+            padding: 24px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            top: 50px;
+            left: 400px;
+        }
+        .name{
+            position: relative;
+            left: 20px;
+        }
+        footer{
+            margin-top: 9rem;
+            padding: 30px;
+            text-align: center;
+        }
+        footer .navbar{
+            justify-content: center;
+            margin-bottom: 2remr;
+        }
+         
+            
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <!-- <a href="" class="logo">Portfolio</a> -->
+            <ul class="navbar">
+                <li> <a href="#About">About</a></li>
+                <li> <a href="#Experiences">Experiences</a></li>
+                <li> <a href="#Projects">Projects</a></li>
+                <li> <a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-container">
+            <div class="header_left">
+                <img src="priyankaimg.jpg" alt="">
+            </div>
+            <div class="header_right">
+                <p><b>Hello, I'm</b></p>
+                <h1>Priyanka Bamboriya</h1>
+                <h2>Frontend Developer</h2>
+                <div class="header_link">
+                    <a href="" class="btn" download=""> Resume</a>
+                    <a href="#Contact" class="btn_contact">Contact</a>
+                </div>
+                <div class="header_social">
+                    <a href=""><img src="icons8-linkedin-50.png" class="icon1"></a>
+                    <a href=""><img src="icons8-github-50.png" class="icon2"></a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </header>
+    <section id="About">
+        <p class="heading_p">Get to know more</p>
+        <h1 class="heading">About Me</h1>
+        <div class="about-container">
+            <div class="heading">
+                <h2>Education</h2>
+                <img src="icons8-education-64 (1).png" class="icon3">
+            </div>
+            <div class="about1">
+                <h4 class="class">10th</h4>
+                <p>Maruti Academy</p>
+
+            </div>
+            <div class="about1">
+                <h4 class="class">12th</h4>
+                <p>Gyan Ganga Public School</p>
+            </div>
+            <div class="about1">
+                <h4 class="class">B-Tech</h4>
+                <p>Lakshmi Narain Collegr Of Technology Bhopal</p>
+            </div>
+        </div>
+    </section>
+    <section id="Experiences">
+        <h1 class="heading">Experiences</h1>
+        <div class="heading">
+            <h2>Fronted Development</h2>
+        </div>
+        <div class="box">
+            <img src="icons8-html-144.png" class="icon4">
+            <h3 class="sub_head">HTML</h3>
+            <h4 class="sub_head">Experienced</h4>
+
+        </div>
+        <div class="box">
+            <img src="icons8-css-144.png" class="icon4">
+            <h3 class="sub_head">CSS</h3>
+            <h4 class="sub_head">Experienced</h4>
+
+        </div>
+        <div class="box">
+            <img src="icons8-javascript-144.png" class="icon4">
+            <h3 class="sub_head">Javascript</h3>
+            <h4 class="sub_head">Experienced</h4>
+
+        </div>
+    </section>
+    <section id="Projects">
+        <p class="heading_p">Browse My Recent</p>
+        <h1 class="heading">Projects</h1>
+        <div class="project">
+            <img src="project_img1.jpg" class="img1">
+            <a href="" class="btn2">Live Demo</a>
+        </div>
+        <div class="project">
+            <img src="project_img2.jpg" class="img1">
+            <a href="" class="btn2">Live Demo</a>
+        </div>
+        <div class="project">
+            <img src="project_img3.jpg" class="img1">
+            <a href="" class="btn2">Live Demo</a>
+        </div>
+        <div class="project">
+            <img src="project_img4.jpg" class="img1">
+            <a href="" class="btn2">Live Demo</a>
+        </div>
+    </section>
+    <section id="Contact">
+        <!-- <p class="heading_p">Get in Touch</p> -->
+        <h1 class="heading">Contact me</h1>
+        <div class="contact_container">
+            <div class="email">
+                <img src="icons8-email-50.png" class="icon5">
+                <a href=""><h5>priyankabamboriya88@gmail.com</h5></a>
+            </div>
+            <div class="linkedin">
+                <img src="icons8-linkedin-50.png" class="icon6">
+                <a href=""><h5 class="name">Priyanka Bamboriya</h5></a>
+            </div>
+            
+        </div>
+
+    </section>
+    <footer>
+        <ul class="navbar">
+            <li> <a href="#About">About</a></li>
+            <li> <a href="#Experiences">Experiences</a></li>
+            <li> <a href="#Projects">Projects</a></li>
+            <li> <a href="#Contact">Contact</a></li>
+        </ul>
+        <p> copyright &copy;priyankaportfolio.com. All rights reserved!</p>
+    </footer>
+
+</body>
+
+</html>
